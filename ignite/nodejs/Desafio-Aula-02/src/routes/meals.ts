@@ -124,7 +124,7 @@ export async function mealsRoute(app: FastifyInstance) {
     return reply.status(202).send()
   })
 
-  app.get('/summary', async (request, reply) => {
+  app.get('/summary', async (request) => {
     const { sessionId } = request.cookies
 
     const [user] = await knex('users')
